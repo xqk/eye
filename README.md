@@ -43,35 +43,23 @@ eye是轻量级无Agent的自动化运维平台，整合了主机管理、主机
 [Yearning — MYSQL 开源SQL语句审核平台](https://github.com/cookieY/Yearning)
 
 
-## 预览
+## 功能
 
 #### 主机批量执行
-![image](https://cdn.eye.icl.site/img/host-exec-2.0.png)
 
 #### 主机在线终端
-![image](https://cdn.eye.icl.site/img/host-console-2.0.png)
 
 #### 文件在线上传下载
-![文件管理](https://cdn.eye.icl.site/img/eye-host-file.png)
 
 #### 应用管理
-![image](https://cdn.eye.icl.site/img/app-2.0.png)
-![image](https://cdn.eye.icl.site/img/app-apply-2.0.png)
 
 #### 任务管理
-![image](https://cdn.eye.icl.site/img/task-2.0.png)
-![image](https://cdn.eye.icl.site/img/task-detail-2.0.png)
+
 #### 配置管理(支持KV,txt,json等格式)
-![image](https://cdn.eye.icl.site/img/service-conf-2.0.png)
-![image](https://cdn.eye.icl.site/img/service-conf-json-2.0.png)
-![image](https://cdn.eye.icl.site/img/conf-history-2.0.png)
 
 #### 监控报警
-![image](https://cdn.eye.icl.site/img/monitor-alarm-2.0.png)
-![image](https://cdn.eye.icl.site/img/monitor-add-2.0.png)
 
 #### 角色权限
-![image](https://cdn.eye.icl.site/img/role-2.0.png)
   
 ## License & Copyright
 [AGPL-3.0](https://opensource.org/licenses/AGPL-3.0)
