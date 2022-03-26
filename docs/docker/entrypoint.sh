@@ -9,7 +9,7 @@ fi
 if [ ! -d /data/eye ]; then
     tar xf /tmp/eye.tar.gz -C /data/
     SECRET_KEY=$(< /dev/urandom tr -dc '!@#%^.a-zA-Z0-9' | head -c50)
-    cat > /data/eye/eye_api/eye//overrides.py << EOF
+    cat > /data/eye/eye_api/eye/overrides.py << EOF
 DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1']
 SECRET_KEY = '${SECRET_KEY}'
