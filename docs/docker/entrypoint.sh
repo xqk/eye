@@ -50,4 +50,8 @@ EOF
     rm -f $tfile
 fi
 
+if [ ! -d /data/eye/eye_api/logs]; then
+    mkdir -p /data/eye/eye_api/logs
+fi
+
 exec supervisord -c /etc/supervisord.conf
