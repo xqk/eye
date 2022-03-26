@@ -1,0 +1,41 @@
+/**
+ * Copyright (c) xqk Organization. https://github.com/xqk/eye
+ * Copyright (c) <eye.icl.site@gmail.com>
+ * Released under the AGPL-3.0 License.
+ */
+import { observable } from "mobx";
+import http from 'libs/http';
+
+class Store {
+  @observable records = [];
+  @observable record = {};
+  @observable confRel = {};
+  @observable isFetching = false;
+  @observable formVisible = false;
+  @observable relVisible = false;
+
+  @observable f_name;
+
+  fetchRecords = () => {
+    this.isFetching = true;
+    return http.get('/api/app/')
+      .then(res => this.records = res)
+      .finally(() => this.isFetching = false)
+  };
+
+  showForm = (info = {}) => {
+    this.formVisible = true;
+    this.record = info
+  };
+
+  showRel = (info) => {
+    this.relVisible = true;
+    this.record = info;
+    this.confRel = {
+      app: info['rel_apps'],
+      service: info['rel_services']
+    }
+  }
+}
+
+export default new Store()
