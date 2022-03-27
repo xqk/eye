@@ -8,6 +8,11 @@ fi
 
 if [ ! -d /data/eye ]; then
     tar xf /tmp/eye.tar.gz -C /data/
+
+    if [ ! -d /data/eye/eye_api/logs]; then
+        mkdir -p /data/eye/eye_api/logs
+    fi
+
     SECRET_KEY=$(< /dev/urandom tr -dc '!@#%^.a-zA-Z0-9' | head -c50)
     cat > /data/eye/eye_api/eye/overrides.py << EOF
 DEBUG = False
@@ -48,10 +53,6 @@ EOF
 
     /usr/libexec/mysqld --user=mysql --bootstrap < $tfile
     rm -f $tfile
-fi
-
-if [ ! -d /data/eye/eye_api/logs]; then
-    mkdir -p /data/eye/eye_api/logs
 fi
 
 exec supervisord -c /etc/supervisord.conf
