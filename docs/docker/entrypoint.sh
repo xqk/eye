@@ -9,9 +9,7 @@ fi
 if [ ! -d /data/eye ]; then
     tar xf /tmp/eye.tar.gz -C /data/
 
-    if [ ! -d /data/eye/eye_api/logs]; then
-        mkdir -p /data/eye/eye_api/logs
-    fi
+    mkdir -p /data/eye/eye_api/logs
 
     SECRET_KEY=$(< /dev/urandom tr -dc '!@#%^.a-zA-Z0-9' | head -c50)
     cat > /data/eye/eye_api/eye/overrides.py << EOF
